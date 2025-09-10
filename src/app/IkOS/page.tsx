@@ -2,10 +2,13 @@
 import TaskBar from "@/components/commons/taskbar";
 import TopNotch from "@/components/commons/topNotch";
 import Finder from "@/components/finder";
+import Projects from "@/components/projects";
+import Resume from "@/components/resume";
+import { Icon } from "@/store/slice/taskbarSlice";
 import { RootState } from "@/store/store";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 
 
@@ -15,7 +18,9 @@ import { useSelector } from "react-redux";
 export default function IKOS() {
 
     // Get the background image from the Redux store
+    const [openedFiles, setOpenedFiles] = useState<string[]>([]);
     const backgroundImage = useSelector((state: RootState) => state.background.image);
+    const files = useSelector((state: RootState) => state.taskbar.taskbarIcons);
 
 
     useEffect(() => {
@@ -35,8 +40,13 @@ export default function IKOS() {
     }, []);
 
 
+    useEffect(() => {
+        setOpenedFiles(files.filter((file: Icon) => file.isOpen).map((file: Icon) => file.id));
+    }, [files]);
+
+
     return (
-        <div className="w-screen h-screen overflow-hidden relative bg-blue-500">
+        <div className="w-screen h-screen overflow-hidden relative bg-blue-500 scrollbar-hide">
 
 
             <AnimatePresence mode="sync">
@@ -69,6 +79,12 @@ export default function IKOS() {
 
             {/* Finder */}
             <Finder />
+
+            {/* Projects */}
+            <Projects/>
+
+            {/* Resume */}
+            <Resume />
 
             {/* Taskbar */}
             <TaskBar />

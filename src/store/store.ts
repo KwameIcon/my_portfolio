@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { configureStore } from "@reduxjs/toolkit";
 import mouseReducer from "./slice/mouseSlice";
 import backgroundReducer from "./slice/backgroundSlice";
@@ -10,7 +10,7 @@ export const store = configureStore({
     reducer: {
         mouse: mouseReducer,
         background: backgroundReducer,
-        taskbar: taskbarReducer
+        taskbar: taskbarReducer,
     }
 })
 

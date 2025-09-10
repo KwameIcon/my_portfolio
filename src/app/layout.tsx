@@ -3,6 +3,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Providers } from "@/store/provider";
 import { GlobalMouseTracker } from "@/lib/layout";
+import "primereact/resources/themes/lara-light-cyan/theme.css";
+
 
 
 
@@ -24,7 +26,7 @@ export const metadata: Metadata = {
 
 
 
- 
+
 export default function RootLayout({
   children,
 }: Readonly<{

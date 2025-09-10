@@ -1,6 +1,4 @@
-"use client";
-
-import { Button } from "primereact/button";
+"use client";;
 import { DiDocker, DiGit, DiLaravel } from "react-icons/di";
 import { FiFigma } from "react-icons/fi";
 import { SiAntdesign, SiCss3, SiEtcd, SiFramework, SiHtml5, SiJavascript, SiMysql, SiPhp, SiReact, SiShadcnui, SiStyledcomponents, SiTailwindcss, SiTestinglibrary, SiTypescript } from "react-icons/si";
@@ -8,6 +6,7 @@ import { TbBrandFramerMotion, TbBrandNextjs } from "react-icons/tb";
 import { motion } from "framer-motion";
 import { useDispatch, useSelector } from "react-redux";
 import { setBackgroundColor, setBackgroundImage } from "@/store/slice/backgroundSlice";
+import { Tooltip } from "antd";
 
 
 
@@ -38,26 +37,26 @@ const skills = [
 
 
 export const colorClassMap = (color: string) => {
-    switch (color) {
-      case "blue":
-        return "bg-blue-500/20";
-      case "red":
-        return "bg-red-500/20";
-      case "green":
-        return "bg-green-500/20";
-      case "cyan":
-        return "bg-cyan-500/20";
-      case "indigo":
-        return "bg-indigo-500/20";
-      case "black":
-        return "bg-black/20";
-      case "yellow":
-        return "bg-yellow-400/20";
-      case "brown":
-        return "bg-yellow-900/20";
-      default:
-        return "bg-cyan-500/20";
-    }
+  switch (color) {
+    case "blue":
+      return "bg-blue-500/20";
+    case "red":
+      return "bg-red-500/20";
+    case "green":
+      return "bg-green-500/20";
+    case "cyan":
+      return "bg-cyan-500/20";
+    case "indigo":
+      return "bg-indigo-500/20";
+    case "black":
+      return "bg-black/20";
+    case "yellow":
+      return "bg-yellow-400/20";
+    case "brown":
+      return "bg-yellow-900/20";
+    default:
+      return "bg-cyan-500/20";
+  }
 };
 
 
@@ -109,24 +108,11 @@ export default function TopNotch() {
             className="flex items-center space-x-2"
             onClick={() => handleSkillButtonClick(skill.image, skill.color)}
           >
-            <Button
-              tooltip={skill.tooltipText}
-              tooltipOptions={{
-                position: "bottom",
-                mouseTrack: true,
-                mouseTrackTop: 15,
-                style: {
-                  backgroundColor: "#333",
-                  color: "white",
-                  paddingLeft: "10px",
-                  paddingRight: "10px",
-                  borderRadius: "5px",
-                },
-              }}
-              className="w-12 h-12 border border-black/10 bg-gray-200/5 rounded-full flex items-center justify-center"
-            >
-              <skill.icon className="w-9 h-9" style={{ color: iconColor }} />
-            </Button>
+            <Tooltip title={skill.tooltipText}>
+              <div className="w-12 h-12 border border-black/10 bg-gray-200/5 rounded-full flex items-center justify-center cursor-pointer">
+                <skill.icon className="w-9 h-9" style={{ color: iconColor }} />
+              </div>
+            </Tooltip>
           </motion.li>
         ))}
       </motion.ul>
