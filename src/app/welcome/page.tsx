@@ -1,3 +1,4 @@
+"use client";
 import { BsArrowRight } from "react-icons/bs";
 import { useSelector } from "react-redux";
 import { Lens } from "@/components/magicui/lens";
