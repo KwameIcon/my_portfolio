@@ -15,7 +15,7 @@ export default function EdgeBrowser() {
   };
 
   return (
-    <CustomeModal title="Microsoft Edge" type="browse" id="browse">
+    <CustomeModal title="Microsoft Edge" type="edge" id="edge">
       <div 
         style={{
             backgroundImage: "url('/bg/skyblue.jpg')",

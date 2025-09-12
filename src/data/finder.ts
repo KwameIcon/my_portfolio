@@ -3,8 +3,6 @@ import { IconType } from 'react-icons';
 import { MdContactPage } from 'react-icons/md';
 import { LocateIcon } from 'lucide-react';
 import { PiBrowser } from 'react-icons/pi';
-import { SiNetflix } from 'react-icons/si';
-import { BiMusic } from 'react-icons/bi';
 
 
 export type Links = {
@@ -58,18 +56,8 @@ export const finderLinks: finderLinks = {
         links: [
             {
                 icon: PiBrowser,
-                title: 'Browse',
-                url: 'browse'
-            },
-            {
-                icon: SiNetflix,
-                title: 'Netflix And Chill',
-                url: 'netflix-and-chill'
-            },
-            {
-                icon: BiMusic,
-                title: 'Music',
-                url: 'music'
+                title: 'Edge',
+                url: 'edge'
             }
         ]
     }

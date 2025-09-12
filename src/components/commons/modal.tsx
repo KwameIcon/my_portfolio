@@ -3,8 +3,8 @@ import { Modal } from 'antd';
 import { useDispatch, useSelector } from 'react-redux';
 import ModalHeader from './modalHeader';
 import { useState } from 'react';
-import { removeTaskbarIcon } from '@/store/slice/taskbarSlice';
 import { RootState } from '@/store/store';
+import { closeTaskbarIcon } from '@/store/slice/taskbarSlice';
 
 
 
@@ -36,7 +36,7 @@ export default function CustomeModal({ title, type, id, children }: ModalProps) 
         maskClosable={false}
         width={doc?.isMaximized ? '100%' : doc?.isMinimized ? '150px' : defaultSize.width}
         styles={{ body: { height: doc?.isMaximized ? '94dvh' : doc?.isMinimized ? '100px' : defaultSize.height } }}
-        onCancel={() => dispatch(removeTaskbarIcon({ id: type }))}
+        onCancel={() => dispatch(closeTaskbarIcon({ id: type }))}
         className={`!relative !overflow-hidden !rounded-lg`}
       >
         <ModalHeader title={title} id={id} isMinimized={doc?.isMinimized!} />

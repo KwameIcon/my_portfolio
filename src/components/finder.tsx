@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import Image from 'next/image';
 import { finderLinks, Links } from '@/data/finder';
 import { RootState } from '@/store/store';
-import { addTaskbarIcon, closeTaskbarIcon } from '@/store/slice/taskbarSlice';
+import { closeTaskbarIcon, openTaskbarIcon } from '@/store/slice/taskbarSlice';
 
 
 
@@ -19,7 +19,7 @@ export default function Finder() {
 
     const handleOpenLink = (file: Links) => {
         dispatch(closeTaskbarIcon({ id: 'finder' }));
-        dispatch(addTaskbarIcon({ id: file.url, icon: file.url, tooltipText: file.title }));
+        dispatch(openTaskbarIcon({ id: file.url }));
     };
 
 

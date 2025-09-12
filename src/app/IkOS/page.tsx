@@ -1,4 +1,4 @@
-"use client";
+"use client";;
 import CustomBrowser from "@/components/browse";
 import TaskBar from "@/components/commons/taskbar";
 import TopNotch from "@/components/commons/topNotch";
