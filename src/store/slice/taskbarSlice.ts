@@ -5,6 +5,7 @@ import { FaAppStore, FaCode, FaEdge, FaFile, FaMusic, FaTerminal, FaVideo } from
 import { GrProjects, GrResume } from "react-icons/gr";
 import { ImFinder } from "react-icons/im";
 import { MdContactPage } from "react-icons/md";
+import { PiBrowser } from "react-icons/pi";
 
 
 
@@ -33,7 +34,8 @@ export let Icons: { [key: string]: React.ElementType } = {
     resume: GrResume,
     projects: GrProjects,
     contact: MdContactPage,
-    locate : LocateIcon 
+    locate : LocateIcon, 
+    browse: PiBrowser
 };
 
 

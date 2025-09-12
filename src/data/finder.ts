@@ -1,6 +1,6 @@
 import { GrProjects, GrResume } from 'react-icons/gr';
 import { IconType } from 'react-icons';
-import { MdContactPage, MdRoomPreferences } from 'react-icons/md';
+import { MdContactPage } from 'react-icons/md';
 import { LocateIcon } from 'lucide-react';
 import { PiBrowser } from 'react-icons/pi';
 import { SiNetflix } from 'react-icons/si';
@@ -50,11 +50,6 @@ export const finderLinks: finderLinks = {
                 icon: LocateIcon,
                 title: 'Locate Me',
                 url: 'locate'
-            },
-            {
-                icon: MdRoomPreferences,
-                title: 'Preferences',
-                url: 'preferences'
             }
         ]
     },
