@@ -1,9 +1,10 @@
 "use client";
 import { createSlice } from "@reduxjs/toolkit";
-import { Settings2Icon } from "lucide-react";
+import { LocateIcon, Settings2Icon } from "lucide-react";
 import { FaAppStore, FaCode, FaEdge, FaFile, FaMusic, FaTerminal, FaVideo } from "react-icons/fa";
 import { GrProjects, GrResume } from "react-icons/gr";
 import { ImFinder } from "react-icons/im";
+import { MdContactPage } from "react-icons/md";
 
 
 
@@ -30,7 +31,9 @@ export let Icons: { [key: string]: React.ElementType } = {
     apps: FaAppStore,
     settings: Settings2Icon,
     resume: GrResume,
-    projects: GrProjects
+    projects: GrProjects,
+    contact: MdContactPage,
+    locate : LocateIcon 
 };
 
 

@@ -1,7 +1,9 @@
 "use client";
 import TaskBar from "@/components/commons/taskbar";
 import TopNotch from "@/components/commons/topNotch";
+import ContactMe from "@/components/contact";
 import Finder from "@/components/finder";
+import LocateMe from "@/components/location";
 import Projects from "@/components/projects";
 import Resume from "@/components/resume";
 import { Icon } from "@/store/slice/taskbarSlice";
@@ -85,6 +87,12 @@ export default function IKOS() {
 
             {/* Resume */}
             <Resume />
+
+            {/* Contact me */}
+            <ContactMe/>
+
+            {/* Locate me */}
+            <LocateMe />
 
             {/* Taskbar */}
             <TaskBar />
