@@ -1,4 +1,3 @@
-import { useSelector } from "react-redux";
 import CustomeModal from "./commons/modal";
 import { useState } from "react";
 import { projectsTabs } from "@/data/projects";
@@ -9,7 +8,6 @@ import { projectsTabs } from "@/data/projects";
 
 
 export default function Projects() {
-  const projects = useSelector((state: any) => state.taskbar.taskbarIcons.find((icon: any) => icon.id === 'projects'));
   const [currentTabContent, setCurrentTabContent] = useState(projectsTabs[0].content);
   const [activeTab, setActiveTab] = useState(projectsTabs[0].id);
 

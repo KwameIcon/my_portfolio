@@ -6,7 +6,7 @@ import { useDispatch } from "react-redux";
 interface ModalHeaderProps {
     title: string;
     id: string;
-    isMinimized: boolean;
+    isMinimized: boolean | undefined;
 }
 
 

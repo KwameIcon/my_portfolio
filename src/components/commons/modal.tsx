@@ -19,7 +19,7 @@ interface ModalProps {
 
 export default function CustomeModal({ title, type, id, children }: ModalProps) {
 
-  const [defaultSize, setDefaultSize] = useState({ width: 800, height: 600 });
+  const [defaultSize] = useState({ width: 800, height: 600 });
   const doc = useSelector((state: RootState) => state.taskbar.taskbarIcons.find(icon => icon.id === type));
   const dispatch = useDispatch();
 
@@ -39,7 +39,7 @@ export default function CustomeModal({ title, type, id, children }: ModalProps) 
         onCancel={() => dispatch(closeTaskbarIcon({ id: type }))}
         className={`!relative !overflow-hidden !rounded-lg`}
       >
-        <ModalHeader title={title} id={id} isMinimized={doc?.isMinimized!} />
+        <ModalHeader title={title} id={id} isMinimized={doc?.isMinimized} />
         <main className={`absolute left-0 top-10 w-full h-full ${doc?.isMinimized ? 'hidden' : ''}`} >
           {children}
         </main>

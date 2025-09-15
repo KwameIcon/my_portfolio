@@ -1,16 +1,8 @@
 import { useJsApiLoader } from "@react-google-maps/api";
 import CustomeModal from "./commons/modal";
 
-const containerStyle = {
-    width: "100%",
-    height: "500px",
-};
 
-// 👇 Your base location (Teshie, Accra)
-const myLocation = {
-    lat: 40.749933,
-    lng: -73.98633,
-};
+
 
 export default function LocateMe() {
     const { isLoaded } = useJsApiLoader({

@@ -15,10 +15,10 @@ const generalInfo = () => {
 
             <h2 className="text-xl font-semibold">Welcome 👋</h2>
 
-            <h2 className="text-xl">Hi, I'm Kwame Anag-bey, a Full-Stack Software Engineer.</h2>
+            <h2 className="text-xl">Hi, I&apos;m Kwame Anag-bey, a Full-Stack Software Engineer.</h2>
 
             <p className="tracking-wider leading-loose">
-                I specialize in building dynamic, high-performance web applications from concept to deployment. With expertise in the JavaScript ecosystem, I leverage frameworks like React and Next.js for front-end development, and PHP with Laravel and SLIM for robust back-end solutions. I'm passionate about clean, efficient code and delivering a seamless user experience.
+                I specialize in building dynamic, high-performance web applications from concept to deployment. With expertise in the JavaScript ecosystem, I leverage frameworks like React and Next.js for front-end development, and PHP with Laravel and SLIM for robust back-end solutions. I&apos;m passionate about clean, efficient code and delivering a seamless user experience.
             </p>
 
             <p className="tracking-wider leading-loose">
@@ -26,7 +26,7 @@ const generalInfo = () => {
             </p>
 
             <p className="tracking-wider leading-loose">
-                You're currently on my personal website, which I've designed to simulate a desktop environment called IkOS. Please feel free to explore and interact with it—all of my projects, professional skills, and contact information are organized as files and applications within this unique interface.
+                You&apos;re currently on my personal website, which I&apos;ve designed to simulate a desktop environment called IkOS. Please feel free to explore and interact with it—all of my projects, professional skills, and contact information are organized as files and applications within this unique interface.
             </p>
 
         </article>
@@ -46,7 +46,7 @@ const whatIDo = () => {
             </p>
 
             <p className="tracking-wider leading-loose">
-                My primary front-end project is the Glaucoma Diagnosis AI, an artificial intelligence system designed to help clinicians accurately predict a patient's glaucoma state. In this role, I was solely responsible for the web application, from designing the user interface to integrating it with the back-end for a seamless operation.
+                My primary front-end project is the Glaucoma Diagnosis AI, an artificial intelligence system designed to help clinicians accurately predict a patient&apos;s glaucoma state. In this role, I was solely responsible for the web application, from designing the user interface to integrating it with the back-end for a seamless operation.
             </p>
 
             <p className="tracking-wider leading-loose">
@@ -74,14 +74,14 @@ const experience = () => {
 
                 <AccordionTab headerTemplate={<h2 className="text-black">Full-Stack Developer (National Service) — RX Health Info Systems</h2>} className="!text-gray-400">
                     <ul className="ml-5 flex flex-col items-start gap-3">
-                        <li>Developed a comprehensive SMS Management System for internal use, designed to monitor and control SMS usage across all of the company’s health applications that relied on a central SMS API.</li>
+                        <li>Developed a comprehensive SMS Management System for internal use, designed to monitor and control SMS usage across all of the company&apos;s health applications that relied on a central SMS API.</li>
                         <li>Architected and implemented the entire application as a full-stack project, using Laravel for the back-end APIs and Next.js for the front end.</li>
                         <li>Created a user-friendly and intuitive dashboard by utilizing UI libraries such as PrimeReact, Ant Design (AntD), and Chart.js, enabling the company to track SMS consumption, set usage limits for individual projects, and analyze usage data for actionable insights.</li>
                     </ul>
                 </AccordionTab>
                 <AccordionTab headerTemplate={<h2 className="text-black">(Front-End Developer) Glaucoma Diagnosis AI (Student) — University of Cape Coast</h2>}>
                     <ul className="ml-5 flex flex-col items-start gap-3">
-                        <li>Developed the front-end for an AI-powered system that assists clinicians in accurately predicting a patient's glaucoma state.</li>
+                        <li>Developed the front-end for an AI-powered system that assists clinicians in accurately predicting a patient&apos;s glaucoma state.</li>
                         <li>Designed and built a seamless and intuitive user interface using Next.js, enhancing the user experience with animations and transitions from libraries like AOS and Framer Motion.</li>
                     </ul>
                 </AccordionTab>

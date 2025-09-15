@@ -13,7 +13,7 @@ import { closeTaskbarIcon, openTaskbarIcon } from '@/store/slice/taskbarSlice';
 export default function Finder() {
 
     const isFinderOpened = useSelector((state: RootState) => state.taskbar.taskbarIcons.find(icon => icon.id === 'finder')?.isOpen);
-    const taskbarIcons = useSelector((state: RootState) => state.taskbar.taskbarIcons);
+    // const taskbarIcons = useSelector((state: RootState) => state.taskbar.taskbarIcons);
     const dispatch = useDispatch();
 
 
@@ -80,22 +80,23 @@ export default function Finder() {
                             </div>
                             <h2 className='text-md font-semibold w-full text-center'>I’M ANAG-BEY</h2>
                         </div>
-                        <h2 className='w-full text-center text-md font-semibold -mt-3'>I'M THE CREATOR OF IKOS WEB</h2>
+                        <h2 className='w-full text-center text-md font-semibold -mt-3'>I&apos;M THE CREATOR OF IKOS WEB</h2>
                         <div className='w-full flex flex-col items-center justify-center gap-3'>
                             <p className='text-sm text-gray-700'>
-                                I am a fullstack web developer, with an infinite amount of love for frontend web development, esp JavaScript, TypeScript, and for popular frontend frameworks like React and Next js. UI libraries such as ANTD, SHADCN, PRIMEREACT etc.
+                                
+                                I am a fullstack web developer&#44; with an infinite amount of love for frontend web development&#44; esp JavaScript&#44; TypeScript&#44; and for popular frontend frameworks like React and Next js. UI libraries such as ANTD&#44; SHADCN&#44; PRIMEREACT etc.
                             </p>
                             <p>
-                                However, my love for tech doesn't end there. I enjoy writing backend APIs, scripts, working with databases, and my fav platforms are PHP, (Laravel, SLIM).
+                                However&#44; my love for tech doesn&apos;t end there. I enjoy writing backend APIs&#44; scripts&#44; working with databases&#44; and my fav platforms are PHP&#44; (Laravel&#44; SLIM).
                             </p>
                             <p>
-                                Additionally, I have a strong interest in Quality Assurance (QA) and ensuring that applications are thoroughly tested for bugs and user experience. I enjoy performing manual testing and automated testing using tools like Playwright to ensure applications are of high quality and perform well.
+                                Additionally&#44; I have a strong interest in Quality Assurance (QA) and ensuring that applications are thoroughly tested for bugs and user experience. I enjoy performing manual testing and automated testing using tools like Playwright to ensure applications are of high quality and perform well.
                             </p>
                             <p>
-                                Want to know more, yes there are more to know about me because I’m still new. 😂
+                                Want to know more&#44; yes there are more to know about me because I&apos;m still new. 😂
                             </p>
                             <p>
-                                Loiter around, enjoy my handiwork and do remember that <strong> &lt;h1&gt;I’m the coders code&lt;/h1&gt; </strong>
+                                Loiter around&#44; enjoy my handiwork and do remember that <strong> &lt;h1&gt;I&apos;m the coders code&lt;/h1&gt; </strong>
                             </p>
                         </div>
                     </main>

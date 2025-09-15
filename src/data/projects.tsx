@@ -19,15 +19,15 @@ function Glaucoma() {
             <h2 className="text-xl font-semibold">GLAUCOMA DIAGNOSIS AI</h2>
 
             <p className="tracking-wider leading-loose">
-                The Glaucoma Diagnosis AI is an intelligent system designed to assist clinicians in the accurate prediction of a patient's glaucoma state. Glaucoma is a leading cause of irreversible blindness, and its early detection is crucial for effective treatment. This project addresses this challenge by generating report based on the scanned values provided. The system predict on the report, the glaucoma status, functional and structural damage of Left eye and the Right eye. Stating the status of the eye either early glaucoma, Moderate or Severe based on the predicted results.
+                The Glaucoma Diagnosis AI is an intelligent system designed to assist clinicians in the accurate prediction of a patient&apos;s glaucoma state. Glaucoma is a leading cause of irreversible blindness, and its early detection is crucial for effective treatment. This project addresses this challenge by generating report based on the scanned values provided. The system predict on the report, the glaucoma status, functional and structural damage of Left eye and the Right eye. Stating the status of the eye either early glaucoma, Moderate or Severe based on the predicted results.
             </p>
 
             <div className="flex flex-col gap-2">
-                <h2 className="font-semibold">Sample Input Data</h2>
+                <h2 className="font-semibold">Dashboard</h2>
                 <Lens position={mouse} zoomFactor={2} lensSize={200} >
                     <div className="w-[400px] h-[300px]">
                         <Image
-                            src="/docs/InputTypes.jpg"
+                            src="/docs/g_dashboard.png"
                             alt="Welcome"
                             layout="fill"
                             objectFit="contain"
@@ -41,7 +41,7 @@ function Glaucoma() {
                 <Lens defaultPosition={{ x: 20, y: 3 }} position={mouse} zoomFactor={2} lensSize={200} >
                     <div className="w-[400px] h-[300px]">
                         <Image
-                            src="/docs/InputTypes.jpg"
+                            src="/docs/g_report.png"
                             alt="Welcome"
                             layout="fill"
                             objectFit="contain"
@@ -99,7 +99,7 @@ function SMS() {
                 <Lens defaultPosition={{ x: 20, y: 3 }} position={mouse} zoomFactor={2} lensSize={200} >
                     <div className="w-[400px] h-[300px]">
                         <Image
-                            src="/docs/InputTypes.jpg"
+                            src="/docs/sms_d.png"
                             alt="Welcome"
                             layout="fill"
                             objectFit="contain"
@@ -113,7 +113,7 @@ function SMS() {
                 <Lens defaultPosition={{ x: 20, y: 3 }} position={mouse} zoomFactor={2} lensSize={200} >
                     <div className="w-[400px] h-[300px]">
                         <Image
-                            src="/docs/InputTypes.jpg"
+                            src="/docs/sms_dd.png"
                             alt="Welcome"
                             layout="fill"
                             objectFit="contain"
@@ -172,7 +172,7 @@ function AnimateHub() {
                 <ul className="ml-10 list-disc">
                     <li>Full Website Development: Developed the complete front-end for the site, from the homepage to all subsequent pages, using React.js with TypeScript to ensure a robust and maintainable codebase.</li>
                     <li>Dynamic Animations: Integrated the Animate on Scroll (AOS) library to add a layer of dynamic visual interest, making the user experience more interactive and memorable.</li>
-                    <li>Responsive Design: Ensured the website's layout and animations are fully responsive, providing a seamless and consistent experience across all devices and screen sizes.</li>
+                    <li>Responsive Design: Ensured the website&apos;s layout and animations are fully responsive, providing a seamless and consistent experience across all devices and screen sizes.</li>
                 </ul>
             </div>
 
@@ -211,7 +211,7 @@ function Game() {
             <h2 className="text-xl font-semibold">TILE FLIP GAME</h2>
 
             <p className="tracking-wider leading-loose">
-                The Tile Flip Game is a classic memory matching game developed as a lightweight, single-page web application. This game was my introductory project at Rx Health and it's purpose was to demonstrate proficiency in front-end development by creating an interactive and responsive user experience with a focus on clean design and efficient code. The game challenges users to find matching pairs of flags, and its simple, engaging nature makes it a perfect example of a small-scale, polished project.</p>
+                The Tile Flip Game is a classic memory matching game developed as a lightweight, single-page web application. This game was my introductory project at Rx Health and it&apos;s purpose was to demonstrate proficiency in front-end development by creating an interactive and responsive user experience with a focus on clean design and efficient code. The game challenges users to find matching pairs of flags, and its simple, engaging nature makes it a perfect example of a small-scale, polished project.</p>
 
             <div className="flex flex-col gap-2">
                 <h2 className="font-semibold">My Role & Contributions</h2>
@@ -258,7 +258,7 @@ function BrowserMarkdown() {
             <h2 className="text-xl font-semibold">IN BROWSER MARKDOWN</h2>
 
             <p className="tracking-wider leading-loose">
-The In-Browser Markdown application is a personal (school) project designed to be a lightweight and efficient tool for writers and developers. It provides a clean, distraction-free environment for creating and editing markdown files, with a real-time preview of the formatted text. The application prioritizes user experience by managing all files locally, ensuring that users' work is secure and accessible without the need for a server.</p>
+The In-Browser Markdown application is a personal (school) project designed to be a lightweight and efficient tool for writers and developers. It provides a clean, distraction-free environment for creating and editing markdown files, with a real-time preview of the formatted text. The application prioritizes user experience by managing all files locally, ensuring that users&apos; work is secure and accessible without the need for a server.</p>
 
             <div className="flex flex-col gap-2">
                 <h2 className="font-semibold">My Role & Contributions</h2>
@@ -267,7 +267,7 @@ The In-Browser Markdown application is a personal (school) project designed to b
                     I was the sole developer on this project, responsible for its full-stack implementation and design. </p>
                 <ul className="ml-10 list-disc">
                     <li>Front-End Development: Built the entire user interface using React.js with TypeScript for type safety and code quality. The application was styled using Styled Components to ensure a modular and maintainable codebase.</li>
-                    <li>Local File Management: Implemented a file management system using the browser's Local Storage to save and retrieve user files, providing a seamless and secure experience without a server.</li>
+                    <li>Local File Management: Implemented a file management system using the browser&apos;s Local Storage to save and retrieve user files, providing a seamless and secure experience without a server.</li>
                     <li>Responsive Design: Ensured the application is fully responsive, offering an optimal user experience on both desktop and mobile devices.</li>
                 </ul>
             </div>

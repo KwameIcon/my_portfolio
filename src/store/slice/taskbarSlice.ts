@@ -20,7 +20,7 @@ export interface Icon {
 
 
 
-export let Icons: { [key: string]: React.ElementType } = {
+export const Icons: { [key: string]: React.ElementType } = {
     finder: ImFinder,
     edge: FaEdge,
     resume: GrResume,
@@ -41,9 +41,9 @@ const initialState: TaskbarState = {
         { id: "finder", icon: 'finder', tooltipText: "Finder", isOpen: false, isMaximized: false, isMinimized: false, active: false },
         { id: "edge", icon: 'edge', tooltipText: "Edge", isOpen: false, isMaximized: false, isMinimized: false, active: false },
         { id: "resume", icon: 'resume', tooltipText: "Resume", isOpen: false, isMaximized: false, isMinimized: false, active: false },
-        { id: "projects", icon: 'projects', tooltipText: "Projects", isOpen: false, isMaximized: false, isMinimized: false, active: false },
-        { id: "contact", icon: 'contact', tooltipText: "Contact", isOpen: false, isMaximized: false, isMinimized: false, active: false },
-        { id: "locate", icon: 'locate', tooltipText: "Locate", isOpen: false, isMaximized: false, isMinimized: false, active: false },
+        { id: "projects", icon: 'projects', tooltipText: "My Projects", isOpen: false, isMaximized: false, isMinimized: false, active: false },
+        { id: "contact", icon: 'contact', tooltipText: "Contact Me", isOpen: false, isMaximized: false, isMinimized: false, active: false },
+        { id: "locate", icon: 'locate', tooltipText: "Location", isOpen: false, isMaximized: false, isMinimized: false, active: false },
     ]
 
 }

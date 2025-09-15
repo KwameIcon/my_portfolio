@@ -14,14 +14,12 @@ export default function Welcome() {
 
     const mouse = useSelector((state: RootState) => state.mouse);
     const [password, setPassword] = useState("password");
-    const [wrongPassword, setWrongPassword] = useState(false);
     const router = useRouter();
 
 
 
     const handleLogin = (value: string) => {
         if (value === "password") {
-            setWrongPassword(false);
             alert("Login successful");
             router.push("/IkOS");
         } else {

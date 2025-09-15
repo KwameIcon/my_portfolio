@@ -14,8 +14,9 @@ export type IconProps = React.HTMLAttributes<SVGElement>;
 
 export default function TaskBar() {
 
-
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const iconColor = useSelector((state: any) => state.background.color);
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const taskbarIcons = useSelector((state: any) => state.taskbar.taskbarIcons);
     const dispatch = useDispatch();
 

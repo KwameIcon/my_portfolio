@@ -65,6 +65,7 @@ export default function TopNotch() {
 
 
   const dispatch = useDispatch();
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const iconColor = useSelector((state: any) => state.background.color);
 
 

@@ -7,11 +7,10 @@ import Finder from "@/components/finder";
 import LocateMe from "@/components/location";
 import Projects from "@/components/projects";
 import Resume from "@/components/resume";
-import { Icon } from "@/store/slice/taskbarSlice";
 import { RootState } from "@/store/store";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useSelector } from "react-redux";
 
 
@@ -21,9 +20,8 @@ import { useSelector } from "react-redux";
 export default function IKOS() {
 
     // Get the background image from the Redux store
-    const [openedFiles, setOpenedFiles] = useState<string[]>([]);
     const backgroundImage = useSelector((state: RootState) => state.background.image);
-    const files = useSelector((state: RootState) => state.taskbar.taskbarIcons);
+    // const files = useSelector((state: RootState) => state.taskbar.taskbarIcons);
 
 
     useEffect(() => {
@@ -31,9 +29,13 @@ export default function IKOS() {
             const el = document.documentElement;
             if (el.requestFullscreen) {
                 el.requestFullscreen();
+                // eslint-disable-next-line @typescript-eslint/no-explicit-any
             } else if ((el as any).webkitRequestFullscreen) {
+                // eslint-disable-next-line @typescript-eslint/no-explicit-any
                 (el as any).webkitRequestFullscreen();
+                // eslint-disable-next-line @typescript-eslint/no-explicit-any
             } else if ((el as any).msRequestFullscreen) {
+                // eslint-disable-next-line @typescript-eslint/no-explicit-any
                 (el as any).msRequestFullscreen();
             }
         };
@@ -42,10 +44,6 @@ export default function IKOS() {
 
     }, []);
 
-
-    useEffect(() => {
-        setOpenedFiles(files.filter((file: Icon) => file.isOpen).map((file: Icon) => file.id));
-    }, [files]);
 
 
     return (
