@@ -4,6 +4,7 @@ import { GiSkills } from "react-icons/gi";
 import { TbUserStar } from "react-icons/tb";
 import { Accordion, AccordionTab } from 'primereact/accordion';
 import { MdContactMail, MdSchool } from "react-icons/md";
+import Link from "next/link";
 
 
 
@@ -194,6 +195,10 @@ function Contact() {
             </address>
 
             <hr title="Or" />
+
+            <address dir="rtl">
+                <p><span>GitHub: </span><Link href={'https://github.com/KwameIcon/'} target="_blank" >https://github.com/KwameIcon</Link></p>
+            </address>
 
         </article>
     )

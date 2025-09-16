@@ -40,7 +40,7 @@ export default function Finder() {
             >
                 <div className='absolute left-0 top-0 w-[250px] h-full bg-[#FFD098] flex flex-col items-start justify-start gap-10'>
                     <header className='w-full h-32 text-lg font-bold border-b border-[#ADA339] flex flex-wrap items-end justify-start gap-5 p-2'>
-                        <Image src="/me/me.jpg" alt="User Avatar" width={55} height={50} className='w-auto h-auto rounded-full' />
+                        <Image src="/me/me_2.jpg" alt="User Avatar" width={55} height={50} className='w-auto h-auto rounded-full' />
                         <div className='grid grid-cols-1 gap-1'>
                             <span className='font-bold text-xs'>ANAG-BEY KWAME</span>
                             <span className='text-xs text-gray-500 whitespace-break-spaces'>Fullstack Web Developer</span>
@@ -76,7 +76,7 @@ export default function Finder() {
                     <main className='w-full flex flex-col items-center justify-start gap-5 p-4'>
                         <div className='w-full flex flex-col items-center justify-center gap-1'>
                             <div className='w-32 h-32 rounded-full border-2 border-[#FFD098] p-2 overflow-hidden'>
-                                <Image src="/me/me.jpg" alt="User Avatar" width={55} height={50} className='w-full h-full rounded-full object-cover' />
+                                <Image src="/me/me_1.jpg" alt="User Avatar" width={55} height={50} className='w-full h-full rounded-full object-cover' />
                             </div>
                             <h2 className='text-md font-semibold w-full text-center'>I’M ANAG-BEY</h2>
                         </div>
