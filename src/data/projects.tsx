@@ -2,7 +2,7 @@ import { Lens } from "@/components/magicui/lens";
 import { RootState } from "@/store/store";
 import Image from "next/image";
 import Link from "next/link";
-import { BsEyeSlash, BsMarkdown } from "react-icons/bs";
+import { BsEyeSlash, BsMarkdown, BsRobot } from "react-icons/bs";
 import { GiGamepad } from "react-icons/gi";
 import { MdAnimation, MdSms } from "react-icons/md";
 import { useSelector } from "react-redux";
@@ -297,10 +297,51 @@ The In-Browser Markdown application is a personal (school) project designed to b
 
 
 
+
+// Agentic Engineering Projects
+// Agentic Engineering Projects
+function AgenticEngineering() {
+    return (
+        <article id="agentic-engineering" className="w-full h-full p-4 flex flex-col gap-5 justify-start text-black/70 text-[16px]">
+            <h2 className="text-xl font-semibold uppercase">Autonomous AI Agents & Automation</h2>
+
+            <p className="tracking-wider leading-loose">
+                In my current role, I architect and deploy <strong>Agentic Workflows</strong> designed to bridge the gap between Large Language Models and real-world business operations. Unlike standard chatbots, these agents are equipped with "tools" that allow them to interact with internal systems, process complex documentation, and perform autonomous data management. My work focuses on transforming static AI into a proactive workforce that handles repetitive tasks with precision.
+            </p>
+
+            <div className="flex flex-col gap-2">
+                <h2 className="font-semibold">Key Implementations & Contributions</h2>
+                <p className="tracking-wider leading-loose">
+                    I am responsible for the end-to-end development of these agents, ensuring they can safely and accurately execute operations within our ecosystem.
+                </p>
+                <ul className="ml-10 list-disc flex flex-col gap-2">
+                    <li><strong>Automated Claims Processing:</strong> Built an agent capable of accessing and assessing insurance applications, extracting key data points, and determining claim validity based on predefined business logic.</li>
+                    <li><strong>Action-Oriented Chatbots:</strong> Developed conversational interfaces that do more than answer questions; they interact with <strong>Backend APIs</strong> to create, update, and retrieve user data in real-time.</li>
+                    <li><strong>Tool & Function Calling:</strong> Engineered the communication layer between AI models and Laravel-based APIs, allowing the agent to "choose" the correct endpoint to call based on the user&apos;s intent.</li>
+                    <li><strong>Data Orchestration:</strong> Automated the lifecycle of data entry and validation, significantly reducing manual overhead for administrative tasks.</li>
+                </ul>
+            </div>
+
+            <div className="flex flex-col gap-2 pb-5">
+                <h2 className="font-semibold">Technical Stack</h2>
+                <ul className="ml-10 list-disc">
+                    <li><span>AI Orchestration: OpenAI SDK / Digital Ocean Agent Platform</span></li>
+                    <li><span>Backend Integration: PHP (Laravel) & RESTful APIs</span></li>
+                    <li><span>State Management: Real-time Database Synchronization</span></li>
+                    <li><span>Automation Focus: Function Calling & Agentic Workflows</span></li>
+                </ul>
+            </div>
+        </article>
+    )
+}
+
+
+
 export const projectsTabs = [
     { id: 'glaucoma', label: 'Glaucoma AI P.', content: <Glaucoma />, icon: BsEyeSlash },
     { id: 'sms', label: 'SMS Man. Sys.', content: <SMS />, icon: MdSms },
     { id: 'animateHub', label: 'Animate Hub', content: <AnimateHub />, icon: MdAnimation },
     { id: 'game', label: 'Tile Flip Game', content: <Game />, icon: GiGamepad },
     { id: 'browserMarkdown', label: 'B. Markdown', content: <BrowserMarkdown />, icon: BsMarkdown },
+    { id: 'agenticEngineering', label: 'Agentic Eng.', content: <AgenticEngineering />, icon: BsRobot },    
 ]

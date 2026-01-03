@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 import { useDispatch, useSelector } from "react-redux";
 import { setBackgroundColor, setBackgroundImage } from "@/store/slice/backgroundSlice";
 import { Tooltip } from "antd";
+import { BsRobot } from "react-icons/bs";
 
 
 
@@ -16,6 +17,7 @@ const skills = [
   { id: "php", icon: SiPhp, image: "/bg/php.png", tooltipText: "PHP", color: "green" },
   { id: "react", icon: SiReact, image: "/bg/react.webp", tooltipText: "React", color: "cyan" },
   { id: "nextjs", icon: TbBrandNextjs, image: "/bg/nextjs.png", tooltipText: "NextJS", color: "cyan" },
+  { id: "agentic-ai", icon: BsRobot, image: "/bg/Agentic-AI.jpg", tooltipText: "Agentic AI Engineering", color: "white" },
   { id: "tailwind", icon: SiTailwindcss, image: "/bg/tailwind.jpg", tooltipText: "TailwindCSS", color: "cyan" },
   { id: "qa", icon: SiTestinglibrary, image: "/bg/qa.jpg", tooltipText: "Quality Assurance", color: "white" },
   { id: "docker", icon: DiDocker, image: "/bg/docker.png", tooltipText: "Docker", color: "cyan" },

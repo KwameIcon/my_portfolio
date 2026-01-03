@@ -35,7 +35,7 @@ export default function Finder() {
                 closable={false}
                 width={800}
                 styles={{ body: { height: 600 } }}
-                onCancel={() =>  dispatch(closeTaskbarIcon({ id: 'finder' })) }
+                onCancel={() => dispatch(closeTaskbarIcon({ id: 'finder' }))}
                 className='!relative !overflow-hidden !rounded-lg'
             >
                 <div className='absolute left-0 top-0 w-[250px] h-full bg-[#FFD098] flex flex-col items-start justify-start gap-10'>
@@ -71,7 +71,7 @@ export default function Finder() {
                         </section>
                     </main>
                 </div>
-                <div className='absolute right-0 top-0 w-[549px] h-full bg-white flex flex-col items-center justify-start gap-2 px-3 '>
+                <div className='absolute right-0 top-0 w-[549px] h-full overflow-y-scroll scrollbar-hide bg-white flex flex-col items-center justify-start gap-2 px-3 '>
                     <p className='w-full border-b border-[#FFD098] p-2 flex items-center justify-end text-xs'>ABOUT THE DEVELOPER (ME)</p>
                     <main className='w-full flex flex-col items-center justify-start gap-5 p-4'>
                         <div className='w-full flex flex-col items-center justify-center gap-1'>
@@ -83,20 +83,28 @@ export default function Finder() {
                         <h2 className='w-full text-center text-md font-semibold -mt-3'>I&apos;M THE CREATOR OF IKOS WEB</h2>
                         <div className='w-full flex flex-col items-center justify-center gap-3'>
                             <p className='text-sm text-gray-700'>
-                                
-                                I am a fullstack web developer&#44; with an infinite amount of love for frontend web development&#44; esp JavaScript&#44; TypeScript&#44; and for popular frontend frameworks like React and Next js. UI libraries such as ANTD&#44; SHADCN&#44; PRIMEREACT etc.
+                                I am a Fullstack Web Developer with a passion for frontend excellence, specializing in JavaScript, TypeScript, and modern frameworks like React and Next.js, alongside UI libraries such as Ant Design, Shadcn/UI, and PrimeReact.
                             </p>
+
                             <p>
-                                However&#44; my love for tech doesn&apos;t end there. I enjoy writing backend APIs&#44; scripts&#44; working with databases&#44; and my fav platforms are PHP&#44; (Laravel&#44; SLIM).
+                                However, my expertise extends to the server side. I enjoy architecting backend APIs and managing databases, with a particular fondness for PHP and the Laravel ecosystem.
                             </p>
+
+                            {/* New AI Agent Section */}
                             <p>
-                                Additionally&#44; I have a strong interest in Quality Assurance (QA) and ensuring that applications are thoroughly tested for bugs and user experience. I enjoy performing manual testing and automated testing using tools like Playwright to ensure applications are of high quality and perform well.
+                                I am also deeply involved in <strong>Agentic Engineering</strong>, where I build autonomous AI agents to automate complex tasks. This includes developing agents that can assess insurance claims, handle real-time user queries, and interact directly with backend APIs to perform data operations on behalf of the user.
                             </p>
+
                             <p>
-                                Want to know more&#44; yes there are more to know about me because I&apos;m still new. 😂
+                                Additionally, I have a strong focus on Quality Assurance (QA). I ensure high-performance user experiences by combining manual testing with automated workflows using tools like Playwright.
                             </p>
+
+                            <p className="italic">
+                                Want to know more? There’s always more to discover, as I’m constantly evolving and learning. 😂
+                            </p>
+
                             <p>
-                                Loiter around&#44; enjoy my handiwork and do remember that <strong> &lt;h1&gt;I&apos;m the coders code&lt;/h1&gt; </strong>
+                                Loiter around, enjoy my handiwork, and remember: <strong>&lt;h1&gt;I'm the coder's code&lt;/h1&gt;</strong>
                             </p>
                         </div>
                     </main>
