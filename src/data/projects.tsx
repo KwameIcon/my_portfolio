@@ -299,14 +299,13 @@ The In-Browser Markdown application is a personal (school) project designed to b
 
 
 // Agentic Engineering Projects
-// Agentic Engineering Projects
 function AgenticEngineering() {
     return (
         <article id="agentic-engineering" className="w-full h-full p-4 flex flex-col gap-5 justify-start text-black/70 text-[16px]">
             <h2 className="text-xl font-semibold uppercase">Autonomous AI Agents & Automation</h2>
 
             <p className="tracking-wider leading-loose">
-                In my current role, I architect and deploy <strong>Agentic Workflows</strong> designed to bridge the gap between Large Language Models and real-world business operations. Unlike standard chatbots, these agents are equipped with "tools" that allow them to interact with internal systems, process complex documentation, and perform autonomous data management. My work focuses on transforming static AI into a proactive workforce that handles repetitive tasks with precision.
+                In my current role, I architect and deploy <strong>Agentic Workflows</strong> designed to bridge the gap between Large Language Models and real-world business operations. Unlike standard chatbots, these agents are equipped with &quot;tools&quot; that allow them to interact with internal systems, process complex documentation, and perform autonomous data management. My work focuses on transforming static AI into a proactive workforce that handles repetitive tasks with precision.
             </p>
 
             <div className="flex flex-col gap-2">
@@ -317,7 +316,7 @@ function AgenticEngineering() {
                 <ul className="ml-10 list-disc flex flex-col gap-2">
                     <li><strong>Automated Claims Processing:</strong> Built an agent capable of accessing and assessing insurance applications, extracting key data points, and determining claim validity based on predefined business logic.</li>
                     <li><strong>Action-Oriented Chatbots:</strong> Developed conversational interfaces that do more than answer questions; they interact with <strong>Backend APIs</strong> to create, update, and retrieve user data in real-time.</li>
-                    <li><strong>Tool & Function Calling:</strong> Engineered the communication layer between AI models and Laravel-based APIs, allowing the agent to "choose" the correct endpoint to call based on the user&apos;s intent.</li>
+                    <li><strong>Tool & Function Calling:</strong> Engineered the communication layer between AI models and Laravel-based APIs, allowing the agent to &quot;choose&quot; the correct endpoint to call based on the user&apos;s intent.</li>
                     <li><strong>Data Orchestration:</strong> Automated the lifecycle of data entry and validation, significantly reducing manual overhead for administrative tasks.</li>
                 </ul>
             </div>

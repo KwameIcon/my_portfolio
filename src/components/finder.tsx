@@ -78,7 +78,7 @@ export default function Finder() {
                             <div className='w-32 h-32 rounded-full border-2 border-[#FFD098] p-2 overflow-hidden'>
                                 <Image src="/me/me_1.jpg" alt="User Avatar" width={55} height={50} className='w-full h-full rounded-full object-cover' />
                             </div>
-                            <h2 className='text-md font-semibold w-full text-center'>I’M ANAG-BEY</h2>
+                            <h2 className='text-md font-semibold w-full text-center'>I&apos;M ANAG-BEY</h2>
                         </div>
                         <h2 className='w-full text-center text-md font-semibold -mt-3'>I&apos;M THE CREATOR OF IKOS WEB</h2>
                         <div className='w-full flex flex-col items-center justify-center gap-3'>
@@ -100,11 +100,11 @@ export default function Finder() {
                             </p>
 
                             <p className="italic">
-                                Want to know more? There’s always more to discover, as I’m constantly evolving and learning. 😂
+                                Want to know more? There&apos;s always more to discover, as I&apos;m constantly evolving and learning. 😂
                             </p>
 
                             <p>
-                                Loiter around, enjoy my handiwork, and remember: <strong>&lt;h1&gt;I'm the coder's code&lt;/h1&gt;</strong>
+                                Loiter around, enjoy my handiwork, and remember: <strong>&lt;h1&gt;I&apos;m the coder&apos;s code&lt;/h1&gt;</strong>
                             </p>
                         </div>
                     </main>
