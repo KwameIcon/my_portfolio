@@ -1,5 +1,6 @@
-"use client";;
+"use client";
 import { Icon, Icons, openTaskbarIcon } from "@/store/slice/taskbarSlice";
+import { RootState } from "@/store/store";
 import { Tooltip } from "antd";
 import { motion } from "framer-motion";
 import { useDispatch, useSelector } from "react-redux";
@@ -14,10 +15,8 @@ export type IconProps = React.HTMLAttributes<SVGElement>;
 
 export default function TaskBar() {
 
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const iconColor = useSelector((state: any) => state.background.color);
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const taskbarIcons = useSelector((state: any) => state.taskbar.taskbarIcons);
+    const iconColor = useSelector((state: RootState) => state.background.color);
+    const taskbarIcons = useSelector((state: RootState) => state.taskbar.taskbarIcons);
     const dispatch = useDispatch();
 
 
@@ -42,7 +41,7 @@ export default function TaskBar() {
                                 className=""
                             >
                                 <Tooltip title={icon.tooltipText}>
-                                    <div className={`!w-12 !h-12 !border !border-black/10 ${icon.active ? '!bg-[#0F4774]' : '!bg-gray-200/5'} !rounded-full`}>
+                                    <div className={`!w-12 !h-12 !border !border-black/10 ${icon.active || icon.isMinimized ? '!bg-[#0F4774]' : '!bg-gray-200/5'} !rounded-full`}>
                                         <IconComponent className="w-full h-full p-2" style={{ color: iconColor }} />
                                     </div>
                                 </Tooltip>

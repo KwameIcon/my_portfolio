@@ -2,7 +2,7 @@ import { Lens } from "@/components/magicui/lens";
 import { RootState } from "@/store/store";
 import Image from "next/image";
 import Link from "next/link";
-import { BsEyeSlash, BsMarkdown, BsRobot } from "react-icons/bs";
+import { BsChatDots, BsEyeSlash, BsMarkdown, BsRobot, BsShieldCheck } from "react-icons/bs";
 import { GiGamepad } from "react-icons/gi";
 import { MdAnimation, MdSms } from "react-icons/md";
 import { useSelector } from "react-redux";
@@ -29,8 +29,8 @@ function Glaucoma() {
                         <Image
                             src="/docs/g_dashboard.png"
                             alt="Welcome"
-                            layout="fill"
-                            objectFit="contain"
+                            fill
+                            className="object-contain"
                         />
                     </div>
                 </Lens>
@@ -43,8 +43,8 @@ function Glaucoma() {
                         <Image
                             src="/docs/g_report.png"
                             alt="Welcome"
-                            layout="fill"
-                            objectFit="contain"
+                            fill
+                            className="object-contain"
                         />
                     </div>
                 </Lens>
@@ -101,8 +101,8 @@ function SMS() {
                         <Image
                             src="/docs/sms_d.png"
                             alt="Welcome"
-                            layout="fill"
-                            objectFit="contain"
+                            fill
+                            className="object-contain"
                         />
                     </div>
                 </Lens>
@@ -115,8 +115,8 @@ function SMS() {
                         <Image
                             src="/docs/sms_dd.png"
                             alt="Welcome"
-                            layout="fill"
-                            objectFit="contain"
+                            fill
+                            className="object-contain"
                         />
                     </div>
                 </Lens>
@@ -335,9 +335,74 @@ function AgenticEngineering() {
 }
 
 
+function AyoInsuranceEcosystem() {
+    return (
+        <article id="ayo-insurance-ecosystem" className="w-full h-full p-4 flex flex-col gap-5 justify-start text-black/70 text-[16px]">
+            <h2 className="text-xl font-semibold uppercase">MTN aYo Insurance Platform Contributions</h2>
+
+            <p className="tracking-wider leading-loose">
+                I contributed to multiple production-facing systems in the aYo ecosystem, with a strong focus on insurance operations, claims enablement, and customer support tooling. These projects were built to improve operational speed, support quality, and overall process reliability.
+            </p>
+
+            <div className="flex flex-col gap-2">
+                <h2 className="font-semibold">Core Products I Built</h2>
+                <ul className="ml-10 list-disc flex flex-col gap-2">
+                    <li><strong>MTN aYo CoverHub Portal:</strong> Contributed to the insurance portal used for aYo operations and customer insurance workflows.</li>
+                    <li><strong>aYo CRM System (Full-Stack):</strong> Built and maintained a CRM platform using <strong>React.js</strong> for the front end and <strong>Laravel</strong> for the backend APIs and business logic.</li>
+                    <li><strong>Claims Portal (Front-End):</strong> Developed claims-facing user interfaces to streamline claims intake, processing visibility, and operational workflows.</li>
+                    <li><strong>SSO Front-End:</strong> Implemented user-facing SSO flows and integration screens to unify authentication experience across platforms.</li>
+                </ul>
+            </div>
+
+            <div className="flex flex-col gap-2 pb-5">
+                <h2 className="font-semibold">Technical Stack</h2>
+                <ul className="ml-10 list-disc">
+                    <li><span>Front-End: React.js, TypeScript, Tailwindcss</span></li>
+                    <li><span>Back-End: PHP, Laravel, RESTful APIs</span></li>
+                    <li><span>Domain Focus: Insurance operations, claims lifecycle, CRM workflows, unified access</span></li>
+                </ul>
+            </div>
+        </article>
+    )
+}
+
+
+function AyoAIAutomation() {
+    return (
+        <article id="ayo-ai-automation" className="w-full h-full p-4 flex flex-col gap-5 justify-start text-black/70 text-[16px]">
+            <h2 className="text-xl font-semibold uppercase">aYo AI Automation and Agentic Systems</h2>
+
+            <p className="tracking-wider leading-loose">
+                I built AI-powered systems to improve claims processing and customer support by combining LLM-driven workflows with backend data access and business rules.
+            </p>
+
+            <div className="flex flex-col gap-2">
+                <h2 className="font-semibold">Key AI Deliverables</h2>
+                <ul className="ml-10 list-disc flex flex-col gap-2">
+                    <li><strong>Claims Assessment AI Agent:</strong> Built an automation agent that assists teams by assessing claims context and supporting faster, more consistent claims processing decisions.</li>
+                    <li><strong>Agentic Real-Time Chatbot:</strong> Built a chatbot that responds to real-time questions, including responses backed by live data from connected databases and internal systems.</li>
+                    <li><strong>Workflow Integration:</strong> Connected conversational and autonomous agent behavior with internal business logic so actions are not limited to static Q&A.</li>
+                </ul>
+            </div>
+
+            <div className="flex flex-col gap-2 pb-5">
+                <h2 className="font-semibold">Engineering Focus</h2>
+                <ul className="ml-10 list-disc">
+                    <li><span>Agentic workflows for claims and support operations</span></li>
+                    <li><span>Real-time API and database-backed response systems</span></li>
+                    <li><span>Practical AI integration for measurable business outcomes</span></li>
+                </ul>
+            </div>
+        </article>
+    )
+}
+
+
 
 export const projectsTabs = [
     { id: 'glaucoma', label: 'Glaucoma AI P.', content: <Glaucoma />, icon: BsEyeSlash },
+    { id: 'ayoInsurance', label: 'aYo Platforms', content: <AyoInsuranceEcosystem />, icon: BsShieldCheck },
+    { id: 'ayoAI', label: 'aYo Agentic AI', content: <AyoAIAutomation />, icon: BsChatDots },
     { id: 'sms', label: 'SMS Man. Sys.', content: <SMS />, icon: MdSms },
     { id: 'animateHub', label: 'Animate Hub', content: <AnimateHub />, icon: MdAnimation },
     { id: 'game', label: 'Tile Flip Game', content: <Game />, icon: GiGamepad },

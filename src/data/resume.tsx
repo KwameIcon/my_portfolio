@@ -19,11 +19,7 @@ const generalInfo = () => {
             <h2 className="text-xl">Hi, I&apos;m Kwame Anag-bey, a Full-Stack Software Engineer.</h2>
 
             <p className="tracking-wider leading-loose">
-                I specialize in building dynamic, high-performance web applications from concept to deployment. With expertise in the JavaScript ecosystem, I leverage frameworks like React and Next.js for front-end development, and PHP with Laravel and SLIM for robust back-end solutions. I&apos;m passionate about clean, efficient code and delivering a seamless user experience.
-            </p>
-
-            <p className="tracking-wider leading-loose">
-                In addition to development, I also have experience in Quality Assurance, where I use tools such as Playwright and Selenium to ensure applications are thoroughly tested and reliable.
+                I specialize in building dynamic, high-performance web applications from concept to deployment. With expertise in the JavaScript ecosystem, I leverage frameworks like React and Next.js for front-end development, and PHP with Laravel for robust back-end solutions. I&apos;m passionate about clean, efficient code and delivering a seamless user experience.
             </p>
 
             <p className="tracking-wider leading-loose">
@@ -51,11 +47,7 @@ const whatIDo = () => {
             </p>
 
             <p className="tracking-wider leading-loose">
-                Beyond my front-end focus, I consider myself a proficient full-stack developer, with a solid command of back-end technologies. I have a strong foundation in PHP using frameworks like Laravel and SLIM, which enables me to build and manage scalable, end-to-end web solutions.
-            </p>
-
-            <p className="tracking-wider leading-loose">
-                I also have experience in Quality Assurance, where I apply tools such as Playwright and Selenium to automate testing and ensure that applications meet high standards of reliability and performance.
+                Beyond my front-end focus, I consider myself a proficient full-stack developer, with a solid command of back-end technologies. I have a strong foundation in PHP using Laravel, which enables me to build and manage scalable, end-to-end web solutions.
             </p>
 
         </article>
@@ -72,6 +64,18 @@ const experience = () => {
             <h2 className="text-lg font-semibold">Professional Experience</h2>
 
             <Accordion multiple>
+
+                <AccordionTab headerTemplate={<h2 className="text-black">Full-Stack & AI Engineer — Chiwara Solutions</h2>} className="!text-gray-400">
+                    <ul className="ml-5 flex flex-col items-start gap-3">
+                        <li>At Chiwara Solutions, I contributed to software systems developed for aYo insurance operations and customer workflows.</li>
+                        <li>Contributed to the MTN aYo CoverHub portal used for insurance operations and product workflows.</li>
+                        <li>Built an end-to-end CRM system for aYo using React.js on the front end and Laravel for APIs and back-end business logic.</li>
+                        <li>Built the front-end claims portal used to support claims intake and claims process visibility.</li>
+                        <li>Developed SSO front-end integration flows to provide a unified sign-in experience across connected products.</li>
+                        <li>Built an AI agent to automate claims assessment and aid claims teams in faster processing workflows.</li>
+                        <li>Built an agentic chatbot capable of real-time responses, including responses backed by live database-connected information.</li>
+                    </ul>
+                </AccordionTab>
 
                 <AccordionTab headerTemplate={<h2 className="text-black">Full-Stack Developer (National Service) — RX Health Info Systems</h2>} className="!text-gray-400">
                     <ul className="ml-5 flex flex-col items-start gap-3">
@@ -121,13 +125,6 @@ const skills = () => {
                 <AccordionTab headerTemplate={<h2 className="text-black">Back-End</h2>} >
                     <ul className="ml-5 flex flex-col items-start gap-3 list-circle">
                         <li>Laravel</li>
-                        <li>SLIM</li>
-                    </ul>
-                </AccordionTab>
-                <AccordionTab headerTemplate={<h2 className="text-black">Quality Assurance</h2>}>
-                    <ul className="ml-5 flex flex-col items-start gap-3 list-circle">
-                        <li>Selenium</li>
-                        <li>Playwright </li>
                     </ul>
                 </AccordionTab>
                 <AccordionTab headerTemplate={<h2 className="text-black">Tools</h2>}>

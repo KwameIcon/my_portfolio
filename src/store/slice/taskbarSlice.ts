@@ -1,4 +1,4 @@
-"use client";;
+"use client";
 import { createSlice } from "@reduxjs/toolkit";
 import { LocateIcon } from "lucide-react";
 import { FaEdge } from "react-icons/fa";
@@ -16,6 +16,7 @@ export interface Icon {
     isMaximized: boolean;
     isMinimized: boolean;
     active: boolean;
+    zIndex: number;
 }
 
 
@@ -32,21 +33,28 @@ export const Icons: { [key: string]: React.ElementType } = {
 
 
 interface TaskbarState {
-    taskbarIcons: Icon[]
+    taskbarIcons: Icon[];
+    nextZIndex: number;
 }
 
 
 const initialState: TaskbarState = {
     taskbarIcons: [
-        { id: "finder", icon: 'finder', tooltipText: "Finder", isOpen: false, isMaximized: false, isMinimized: false, active: false },
-        { id: "edge", icon: 'edge', tooltipText: "Edge", isOpen: false, isMaximized: false, isMinimized: false, active: false },
-        { id: "resume", icon: 'resume', tooltipText: "Resume", isOpen: false, isMaximized: false, isMinimized: false, active: false },
-        { id: "projects", icon: 'projects', tooltipText: "My Projects", isOpen: false, isMaximized: false, isMinimized: false, active: false },
-        { id: "contact", icon: 'contact', tooltipText: "Contact Me", isOpen: false, isMaximized: false, isMinimized: false, active: false },
-        { id: "locate", icon: 'locate', tooltipText: "Location", isOpen: false, isMaximized: false, isMinimized: false, active: false },
-    ]
+        { id: "finder", icon: "finder", tooltipText: "Finder", isOpen: false, isMaximized: false, isMinimized: false, active: false, zIndex: 1 },
+        { id: "edge", icon: "edge", tooltipText: "Edge", isOpen: false, isMaximized: false, isMinimized: false, active: false, zIndex: 1 },
+        { id: "resume", icon: "resume", tooltipText: "Resume", isOpen: false, isMaximized: false, isMinimized: false, active: false, zIndex: 1 },
+        { id: "projects", icon: "projects", tooltipText: "My Projects", isOpen: false, isMaximized: false, isMinimized: false, active: false, zIndex: 1 },
+        { id: "contact", icon: "contact", tooltipText: "Contact Me", isOpen: false, isMaximized: false, isMinimized: false, active: false, zIndex: 1 },
+        { id: "locate", icon: "locate", tooltipText: "Location", isOpen: false, isMaximized: false, isMinimized: false, active: false, zIndex: 1 },
+    ],
+    nextZIndex: 2,
+};
 
-}
+const setActiveWindow = (state: TaskbarState, targetId: string) => {
+    state.taskbarIcons.forEach((icon) => {
+        icon.active = icon.id === targetId;
+    });
+};
 
 
 
@@ -56,48 +64,73 @@ const taskbarSlice = createSlice({
     reducers: {
         addTaskbarIcon: (state, action) => {
             const newIcon = action.payload as Icon;
-            if (state.taskbarIcons.some((icon) => icon.id === newIcon.id)) {
-                const icon = state.taskbarIcons.find(icon => icon.id === newIcon.id);
-                if (icon) {
-                    icon.isMinimized = false;
-                    icon.isOpen = true;
-                    icon.active = true;
-                }
-            }
-            state.taskbarIcons.push({ ...newIcon, isOpen: true, isMaximized: false, isMinimized: false, active: true });
-        },
-        openTaskbarIcon: (state, action) => {
-            const icon = state.taskbarIcons.find(icon => icon.id === action.payload.id);
+            const icon = state.taskbarIcons.find((item) => item.id === newIcon.id);
+
             if (icon) {
+                setActiveWindow(state, icon.id);
                 icon.isMinimized = false;
                 icon.isOpen = true;
-                icon.active = true;
+                icon.zIndex = state.nextZIndex++;
+                return;
+            }
+
+            setActiveWindow(state, newIcon.id);
+            state.taskbarIcons.push({
+                ...newIcon,
+                isOpen: true,
+                isMaximized: false,
+                isMinimized: false,
+                active: true,
+                zIndex: state.nextZIndex++,
+            });
+        },
+        openTaskbarIcon: (state, action) => {
+            const icon = state.taskbarIcons.find((item) => item.id === action.payload.id);
+            if (icon) {
+                setActiveWindow(state, icon.id);
+                icon.isMinimized = false;
+                icon.isOpen = true;
+                icon.zIndex = state.nextZIndex++;
             }
         },
         closeTaskbarIcon: (state, action) => {
-            const icon = state.taskbarIcons.find(icon => icon.id === action.payload.id);
+            const icon = state.taskbarIcons.find((item) => item.id === action.payload.id);
             if (icon) {
                 icon.isOpen = false;
+                icon.isMinimized = false;
+                icon.isMaximized = false;
                 icon.active = false;
             }
         },
         toggleMaximized: (state, action) => {
-            const icon = state.taskbarIcons.find(icon => icon.id === action.payload.id);
+            const icon = state.taskbarIcons.find((item) => item.id === action.payload.id);
             if (icon) {
+                setActiveWindow(state, icon.id);
                 icon.isMinimized = false;
+                icon.isOpen = true;
                 icon.isMaximized = !icon.isMaximized;
+                icon.zIndex = state.nextZIndex++;
             }
         },
         toggleMinimized: (state, action) => {
-            const icon = state.taskbarIcons.find(icon => icon.id === action.payload.id);
+            const icon = state.taskbarIcons.find((item) => item.id === action.payload.id);
             if (icon) {
                 icon.isOpen = false;
-                icon.isMinimized = !icon.isMinimized;
+                icon.isMinimized = true;
+                icon.isMaximized = false;
+                icon.active = false;
             }
         },
-    }
-})
+        focusTaskbarIcon: (state, action) => {
+            const icon = state.taskbarIcons.find((item) => item.id === action.payload.id);
+            if (icon && icon.isOpen) {
+                setActiveWindow(state, icon.id);
+                icon.zIndex = state.nextZIndex++;
+            }
+        },
+    },
+});
 
 
-export const { addTaskbarIcon, openTaskbarIcon, closeTaskbarIcon, toggleMaximized, toggleMinimized } = taskbarSlice.actions;
+export const { addTaskbarIcon, openTaskbarIcon, closeTaskbarIcon, toggleMaximized, toggleMinimized, focusTaskbarIcon } = taskbarSlice.actions;
 export default taskbarSlice.reducer;

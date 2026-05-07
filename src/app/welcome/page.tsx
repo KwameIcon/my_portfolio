@@ -48,9 +48,8 @@ export default function Welcome() {
                         <Image
                             src="/bg/programmer.jpg"
                             alt="Welcome"
-                            layout="fill"
-                            objectFit="cover"
-                            // className="rounded-2xl"
+                            fill
+                            className="object-cover"
                         />
                     </div>
 

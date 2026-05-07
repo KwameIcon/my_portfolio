@@ -1,7 +1,7 @@
-"use client";;
+"use client";
 import { DiDocker, DiGit, DiLaravel } from "react-icons/di";
 import { FiFigma } from "react-icons/fi";
-import { SiAntdesign, SiCss3, SiEtcd, SiFramework, SiHtml5, SiJavascript, SiMysql, SiPhp, SiReact, SiShadcnui, SiStyledcomponents, SiTailwindcss, SiTestinglibrary, SiTypescript } from "react-icons/si";
+import { SiAntdesign, SiCss3, SiEtcd, SiHtml5, SiJavascript, SiMysql, SiPhp, SiReact, SiShadcnui, SiStyledcomponents, SiTailwindcss, SiTypescript } from "react-icons/si";
 import { TbBrandFramerMotion, TbBrandNextjs } from "react-icons/tb";
 import { motion } from "framer-motion";
 import { useDispatch, useSelector } from "react-redux";
@@ -19,12 +19,10 @@ const skills = [
   { id: "nextjs", icon: TbBrandNextjs, image: "/bg/nextjs.png", tooltipText: "NextJS", color: "cyan" },
   { id: "agentic-ai", icon: BsRobot, image: "/bg/Agentic-AI.jpg", tooltipText: "Agentic AI Engineering", color: "white" },
   { id: "tailwind", icon: SiTailwindcss, image: "/bg/tailwind.jpg", tooltipText: "TailwindCSS", color: "cyan" },
-  { id: "qa", icon: SiTestinglibrary, image: "/bg/qa.jpg", tooltipText: "Quality Assurance", color: "white" },
   { id: "docker", icon: DiDocker, image: "/bg/docker.png", tooltipText: "Docker", color: "cyan" },
   { id: "git", icon: DiGit, image: "/bg/git.png", tooltipText: "Git", color: "cyan" },
   { id: "figma", icon: FiFigma, image: "/bg/figma.png", tooltipText: "Figma", color: "cyan" },
   { id: "laravel", icon: DiLaravel, image: "/bg/laravel.jpg", tooltipText: "Laravel", color: "cyan" },
-  { id: "slim", icon: SiFramework, image: "/bg/slim.webp", tooltipText: "Php Slim", color: "black" },
   { id: "antd", icon: SiAntdesign, image: "/bg/antd.jpeg", tooltipText: "Ant Design", color: "cyan" },
   { id: "shadcn", icon: SiShadcnui, image: "/bg/shadcn.jpeg", tooltipText: "ShadCN", color: "black" },
   { id: "framer-motion", icon: TbBrandFramerMotion, image: "/bg/framer-motion.webp", tooltipText: "Framer Motion", color: "indigo" },

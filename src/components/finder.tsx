@@ -1,19 +1,15 @@
-"use client";;
-import { Modal } from 'antd';
-import { useDispatch, useSelector } from 'react-redux';
+"use client";
+import { useDispatch } from 'react-redux';
 import Image from 'next/image';
 import { finderLinks, Links } from '@/data/finder';
-import { RootState } from '@/store/store';
 import { closeTaskbarIcon, openTaskbarIcon } from '@/store/slice/taskbarSlice';
+import CustomeModal from './commons/modal';
 
 
 
 
 
 export default function Finder() {
-
-    const isFinderOpened = useSelector((state: RootState) => state.taskbar.taskbarIcons.find(icon => icon.id === 'finder')?.isOpen);
-    // const taskbarIcons = useSelector((state: RootState) => state.taskbar.taskbarIcons);
     const dispatch = useDispatch();
 
 
@@ -28,16 +24,7 @@ export default function Finder() {
 
     return (
         <>
-            <Modal
-                centered
-                open={isFinderOpened}
-                footer={false}
-                closable={false}
-                width={800}
-                styles={{ body: { height: 600 } }}
-                onCancel={() => dispatch(closeTaskbarIcon({ id: 'finder' }))}
-                className='!relative !overflow-hidden !rounded-lg'
-            >
+            <CustomeModal title="Finder" type="finder" id="finder">
                 <div className='absolute left-0 top-0 w-[250px] h-full bg-[#FFD098] flex flex-col items-start justify-start gap-10'>
                     <header className='w-full h-32 text-lg font-bold border-b border-[#ADA339] flex flex-wrap items-end justify-start gap-5 p-2'>
                         <Image src="/me/me_3.jpg" alt="User Avatar" width={55} height={50} className='w-auto h-auto rounded-full' />
@@ -96,7 +83,7 @@ export default function Finder() {
                             </p>
 
                             <p>
-                                Additionally, I have a strong focus on Quality Assurance (QA). I ensure high-performance user experiences by combining manual testing with automated workflows using tools like Playwright.
+                                I focus on building reliable, high-performance software experiences with strong engineering practices and production-ready delivery.
                             </p>
 
                             <p className="italic">
@@ -110,7 +97,7 @@ export default function Finder() {
                     </main>
                 </div>
 
-            </Modal>
+            </CustomeModal>
         </>
     );
 }

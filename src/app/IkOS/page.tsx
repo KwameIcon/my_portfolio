@@ -1,4 +1,4 @@
-"use client";;
+"use client";
 import CustomBrowser from "@/components/browse";
 import TaskBar from "@/components/commons/taskbar";
 import TopNotch from "@/components/commons/topNotch";
@@ -10,7 +10,6 @@ import Resume from "@/components/resume";
 import { RootState } from "@/store/store";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
-import { useEffect } from "react";
 import { useSelector } from "react-redux";
 
 
@@ -22,28 +21,6 @@ export default function IKOS() {
     // Get the background image from the Redux store
     const backgroundImage = useSelector((state: RootState) => state.background.image);
     // const files = useSelector((state: RootState) => state.taskbar.taskbarIcons);
-
-
-    useEffect(() => {
-        const requestFullScreen = () => {
-            const el = document.documentElement;
-            if (el.requestFullscreen) {
-                el.requestFullscreen();
-                // eslint-disable-next-line @typescript-eslint/no-explicit-any
-            } else if ((el as any).webkitRequestFullscreen) {
-                // eslint-disable-next-line @typescript-eslint/no-explicit-any
-                (el as any).webkitRequestFullscreen();
-                // eslint-disable-next-line @typescript-eslint/no-explicit-any
-            } else if ((el as any).msRequestFullscreen) {
-                // eslint-disable-next-line @typescript-eslint/no-explicit-any
-                (el as any).msRequestFullscreen();
-            }
-        };
-
-        requestFullScreen();
-
-    }, []);
-
 
 
     return (
