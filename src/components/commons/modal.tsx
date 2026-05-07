@@ -27,7 +27,7 @@ export default function CustomeModal({ title, type, id, children }: ModalProps) 
 
 
   return (
-    <section className='relative'>
+    <section className='relative' onMouseDown={() => dispatch(focusTaskbarIcon({ id: type }))}>
       <Modal
         centered
         open={doc?.isOpen}
@@ -39,7 +39,6 @@ export default function CustomeModal({ title, type, id, children }: ModalProps) 
         width={doc?.isMaximized ? '100%' : doc?.isMinimized ? '150px' : defaultSize.width}
         styles={{ body: { height: doc?.isMaximized ? '94dvh' : doc?.isMinimized ? '100px' : defaultSize.height } }}
         onCancel={() => dispatch(closeTaskbarIcon({ id: type }))}
-        onMouseDown={() => dispatch(focusTaskbarIcon({ id: type }))}
         className={`!relative !overflow-hidden !rounded-lg`}
       >
         <ModalHeader title={title} id={id} isMinimized={doc?.isMinimized} />
